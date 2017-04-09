@@ -1,1 +1,32 @@
 <h1>Profile記入</h1>
+
+   <%= form_for(@user) do |f| %>
+<div class="row">
+<div class="form-group">
+  <div class="col-xs-2">
+  名前:
+  <%= f.text_field :name, class: "form-control" %>
+  </div>
+</div>
+</div>
+
+<div class="row">
+<div class="form-group">
+  <div class="col-xs-1">
+  場所:
+  <%= f.text_field :place, class: "form-control" %>
+  </div>
+</div>
+</div>
+
+<div class="row">
+<div class="form-group">
+    <div class="col-xs-4">
+  メールアドレス:
+  <%= f.text_area :email, class: "form-control" %>
+   </div>
+</div>
+</div>
+
+<%= f.submit "投稿", class: "btn btn-sm btn-primary" %>
+<% end %>
